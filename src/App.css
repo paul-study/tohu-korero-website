@@ -40,9 +40,21 @@ body {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-logo-text {
   font-size: 1.8rem;
   font-weight: bold;
   color: #2c3e50;
+  margin: 0;
 }
 
 .nav-menu {
@@ -230,7 +242,11 @@ section h2 {
     padding: 1rem;
   }
   
-  .nav-logo {
+  .nav-logo-img {
+    height: 35px;
+  }
+  
+  .nav-logo-text {
     font-size: 1.5rem;
   }
   
@@ -337,7 +353,11 @@ section h2 {
     padding: 0.8rem;
   }
   
-  .nav-logo {
+  .nav-logo-img {
+    height: 30px;
+  }
+  
+  .nav-logo-text {
     font-size: 1.3rem;
   }
   

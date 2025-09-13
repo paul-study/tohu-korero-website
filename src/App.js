@@ -6,7 +6,10 @@ function App() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
-          <h1 className="nav-logo">Tohu Korero</h1>
+          <div className="nav-logo">
+            <img src="/signApp.png" alt="Tohu Korero Logo" className="nav-logo-img" />
+            <h1 className="nav-logo-text">Tohu Korero</h1>
+          </div>
           <ul className="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -27,7 +30,7 @@ function App() {
             through video and fingerspelling. Empowering the deaf and hard of hearing community 
             with accessible communication for academics and everyday conversations.
           </p>
-          <a href="https://speechto.netlify.app/" target="_blank" rel="noopener noreferrer" className="cta-button">Try the App</a>
+          <a href="https://speechto.netlify.app/" target="_blank" rel="noopener noreferrer" className="cta-button">Try the App Prototype</a>
         </div>
       </section>
 
@@ -88,8 +91,8 @@ function App() {
           <div className="contact-info">
             <p>App Support: support@tohukorero.com</p>
             <p>Accessibility Team: accessibility@tohukorero.com</p>
-            <p>Phone: +64 (0) 123 456 789</p>
-            <p>TTY Available for Deaf/Hard of Hearing Users</p>
+            {/* <p>Phone: +64 (0) 123 456 789</p> */}
+            {/* <p>TTY Available for Deaf/Hard of Hearing Users</p> */}
           </div>
         </div>
       </section>
