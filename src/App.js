@@ -30,7 +30,7 @@ function App() {
             through video and fingerspelling. Empowering the deaf and hard of hearing community 
             with accessible communication for academics and everyday conversations.
           </p>
-          <a href="https://speechto.netlify.app/" target="_blank" rel="noopener noreferrer" className="cta-button">Try the App Prototype</a>
+          {/* <a href="https://speechto.netlify.app/" target="_blank" rel="noopener noreferrer" className="cta-button">Try the App Prototype</a> */}
         </div>
       </section>
 
