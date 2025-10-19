@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* Navigation */}
+      
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
@@ -15,12 +15,12 @@ function App() {
             <li><a href="#about">About</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#accessibility">Accessibility</a></li>
-            <li><a href="#contact">Support</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      
       <section id="home" className="hero">
         <div className="hero-container">
           <h1 className="hero-title">Tohu Korero</h1>
@@ -34,7 +34,7 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      
       <section id="about" className="about">
         <div className="container">
           <h2>About Tohu Korero</h2>
@@ -49,7 +49,7 @@ function App() {
         </div>
       </section>
 
-      {/* Features Section */}
+      
       <section id="features" className="services">
         <div className="container">
           <h2>App Features</h2>
@@ -70,7 +70,7 @@ function App() {
         </div>
       </section>
 
-      {/* Accessibility Section */}
+      
       <section id="accessibility" className="about">
         <div className="container">
           <h2>Accessibility First</h2>
@@ -83,21 +83,21 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      
       <section id="contact" className="contact">
         <div className="container">
           <h2>Contact & Support</h2>
           <p>Need help with the app or have accessibility questions? We're here to support you.</p>
           <div className="contact-info">
-            <p>App Support: support@tohukorero.com</p>
-            <p>Accessibility Team: accessibility@tohukorero.com</p>
+            <p>Paul Johnson Founder & Director</p>
+            <p>Email: paul@tohukorero.com</p>
             {/* <p>Phone: +64 (0) 123 456 789</p> */}
             {/* <p>TTY Available for Deaf/Hard of Hearing Users</p> */}
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      
       <footer className="footer">
         <div className="container">
           <p>&copy; 2025 Tohu Korero. All rights reserved.</p>
