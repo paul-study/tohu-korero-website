@@ -1,6 +1,56 @@
+import { useRef, useState, useEffect } from 'react';
 import './App.css';
 
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = 'service_rtncsgq';
+const EMAILJS_TEMPLATE_ID = 'template_zzoq2ji';
+const EMAILJS_PUBLIC_KEY = 'FkQY2Ii4rpYWSwujD';
+
 function App() {
+  const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ text: '', type: '' });
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    script.async = true;
+    script.onload = () => {
+      window.emailjs.init(EMAILJS_PUBLIC_KEY);
+    };
+    document.body.appendChild(script);
+    return () => document.body.removeChild(script);
+  }, []);
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatusMessage({ text: '', type: '' });
+
+    const formData = {
+      from_name: formRef.current.name.value,
+      from_email: formRef.current.email.value,
+      message: formRef.current.message.value,
+      to_email: 'paustudylaptop@gmail.com'
+    };
+
+    window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
+      .then(() => {
+        setStatusMessage({ text: 'Message sent successfully!', type: 'success' });
+        formRef.current.reset();
+        setTimeout(() => setIsFormOpen(false), 2000);
+      })
+      .catch(() => {
+        setStatusMessage({ text: 'Failed to send message. Please try again.', type: 'error' });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+        setTimeout(() => setStatusMessage({ text: '', type: '' }), 5000);
+      });
+  };
   return (
     <div className="App">
       
@@ -88,11 +138,44 @@ function App() {
         <div className="container">
           <h2>Contact & Support</h2>
           <p>Need help with the app or have accessibility questions? We're here to support you.</p>
+          
+          {!isFormOpen ? (
+            <button className="feedback-button" onClick={() => setIsFormOpen(true)}>
+              We'd love to hear your feedback & idea's
+            </button>
+          ) : (
+            <div className="contact-form-wrapper">
+              <button className="close-form-button" onClick={() => setIsFormOpen(false)}>
+                ✕
+              </button>
+              <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Your name" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="Your email" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea id="message" name="message" required placeholder="Your message" rows="5"></textarea>
+                </div>
+                <button type="submit" className="submit-button" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+                {statusMessage.text && (
+                  <div className={`status-message ${statusMessage.type}`}>
+                    {statusMessage.text}
+                  </div>
+                )}
+              </form>
+            </div>
+          )}
+
           <div className="contact-info">
             <p>Paul Johnson Founder & Director</p>
             <p>Email: paul@tohukorero.com</p>
-            {/* <p>Phone: +64 (0) 123 456 789</p> */}
-            {/* <p>TTY Available for Deaf/Hard of Hearing Users</p> */}
           </div>
         </div>
       </section>
