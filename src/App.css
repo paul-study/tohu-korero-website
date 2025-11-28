@@ -138,6 +138,53 @@ body {
   background: #c0392b;
 }
 
+/* Prototype Section */
+.prototype-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.prototype-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.prototype-description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.prototype-button {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  background: #f4c542;
+  color: #1a1a2e;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulse 2s infinite;
+}
+
+.prototype-button:hover {
+  animation: none;
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(244, 197, 66, 0.5);
+}
+
+.prototype-note {
+  margin-top: 2rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
 /* Common Section Styles */
 section {
   padding: 4rem 2rem;

@@ -85,6 +85,24 @@ function App() {
       </section>
 
       
+      <section id="prototype" className="prototype-section">
+        <div className="container">
+          <h2>🚀 Try Our Prototype!</h2>
+          <p className="prototype-description">
+            We're excited to share our app prototype with you! Give it a try and experience 
+            speech-to-sign language translation in action. Your feedback helps us improve — 
+            whether it's positive encouragement or constructive suggestions, we'd love to hear from you!
+          </p>
+          <a href="https://tohu.netlify.app/" target="_blank" rel="noopener noreferrer" className="prototype-button">
+            Try the App Prototype
+          </a>
+          <p className="prototype-note">
+            ✨ Help us make Tohu Korero better by sharing your thoughts in the Contact section below!
+          </p>
+        </div>
+      </section>
+
+      
       <section id="about" className="about">
         <div className="container">
           <h2>About Tohu Korero</h2>
