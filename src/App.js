@@ -56,9 +56,12 @@ function App() {
       
       <nav className="navbar">
         <div className="nav-container">
-          <div className="nav-logo">
-            <img src="/signApp.png" alt="Tohu Korero Logo" className="nav-logo-img" />
-            <h1 className="nav-logo-text">Tohu Korero</h1>
+          <div className="nav-header">
+            <a href="https://tohu.netlify.app/" target="_blank" rel="noopener noreferrer" className="nav-try-me nav-try-me-mobile">Launch App</a>
+            <div className="nav-logo">
+              <img src="/signApp.png" alt="Tohu Korero Logo" className="nav-logo-img" />
+              <h1 className="nav-logo-text">Tohu Korero</h1>
+            </div>
           </div>
           <ul className="nav-menu">
             <li><a href="#home">Home</a></li>
@@ -66,7 +69,7 @@ function App() {
             <li><a href="#features">Features</a></li>
             <li><a href="#accessibility">Accessibility</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://tohu.netlify.app/" target="_blank" rel="noopener noreferrer" className="nav-try-me">Launch App</a></li>
+            <li className="nav-try-me-desktop"><a href="https://tohu.netlify.app/" target="_blank" rel="noopener noreferrer" className="nav-try-me">Launch App</a></li>
           </ul>
         </div>
       </nav>
