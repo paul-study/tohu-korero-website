@@ -167,8 +167,8 @@ function App() {
           <p>
             Built with the deaf and hard of hearing community at its core, Tohu Korero follows 
             universal design principles to ensure our app is usable by everyone. Our commitment 
-            to accessibility means clear visual interfaces, offline functionality, and seamless 
-            integration with assistive technologies.
+            to accessibility means clear visual interfaces, seamless integration with assistive 
+            technologies, and the ability to download the app to your mobile or desktop device.
           </p>
           
           <h3 className="audience-title">Who Is This For?</h3>
