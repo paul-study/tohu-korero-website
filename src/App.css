@@ -79,6 +79,23 @@ body {
   color: #3498db;
 }
 
+.nav-try-me {
+  background: #f4c542 !important;
+  color: #333 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 0 0 rgba(244, 197, 66, 0.7);
+}
+
+.nav-try-me:hover {
+  color: #333 !important;
+  animation: none;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(244, 197, 66, 0.6);
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -215,6 +232,13 @@ section h2 {
   color: #555;
 }
 
+.about-secondary {
+  margin-top: 1.5rem !important;
+  font-size: 1.1rem !important;
+  color: #666 !important;
+  font-style: italic;
+}
+
 /* Services Section */
 .services {
   background: white;
@@ -247,6 +271,101 @@ section h2 {
 
 .service-card p {
   color: #666;
+}
+
+/* Audience Grid */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.audience-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.audience-item h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.audience-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.audience-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* NZSL Grammar Examples */
+.grammar-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.grammar-examples {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.grammar-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.grammar-example:last-child {
+  border-bottom: none;
+}
+
+.grammar-example strong {
+  color: #2c3e50;
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.grammar-example .english {
+  color: #666;
+  font-style: italic;
+}
+
+.grammar-example .arrow {
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.grammar-example .nzsl {
+  color: #27ae60;
+  font-weight: 600;
+  font-family: monospace;
+  background: #f0fff4;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
 }
 
 /* Contact Section */
@@ -425,6 +544,38 @@ section h2 {
   padding: 2rem;
 }
 
+.footer-colors {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-colors .color-turquoise {
+  color: #40E0D0;
+  font-weight: 600;
+}
+
+.footer-colors .color-navy {
+  color: #6495ED;
+  font-weight: 600;
+}
+
+.footer-colors .color-yellow {
+  color: #f4c542;
+  font-weight: 600;
+}
+
+.footer-credits {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-tagline {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   html {
@@ -508,6 +659,35 @@ section h2 {
     padding: 0 0.5rem;
   }
   
+  /* Audience Grid */
+  .audience-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .audience-item {
+    padding: 1.2rem;
+  }
+  
+  /* Grammar Examples */
+  .grammar-title {
+    font-size: 1.4rem;
+  }
+  
+  .grammar-examples {
+    padding: 1rem;
+  }
+  
+  .grammar-example {
+    padding: 0.8rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .grammar-example .nzsl {
+    font-size: 0.9rem;
+  }
+  
   /* Services/Features Grid */
   .services-grid {
     grid-template-columns: 1fr;
@@ -536,6 +716,18 @@ section h2 {
   .footer {
     padding: 1.5rem 1rem;
     font-size: 0.9rem;
+  }
+  
+  .footer-colors {
+    font-size: 0.85rem;
+  }
+  
+  .footer-credits {
+    font-size: 0.8rem;
+  }
+  
+  .footer-tagline {
+    font-size: 1rem;
   }
 }
 
