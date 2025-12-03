@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Tohu Korero - NZSL Dictionary Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The official website for Tohu Korero, a speech-to-sign language translator for New Zealand Sign Language (NZSL).
 
-## Available Scripts
+🌐 **Live Website:** [tohukorero.netlify.app](https://tohukorero.netlify.app) | [tohukorero.com](https://tohukorero.com)
 
-In the project directory, you can run:
+🚀 **Launch App:** [tohu.netlify.app](https://tohu.netlify.app)
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tohu Korero is an innovative accessibility app that transforms spoken words into sign language in real-time. Using advanced speech recognition and translation technology, our app provides visual sign language communication through video demonstrations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- 🎤 **Speech Recognition** - Speak naturally into your device's microphone
+- 🔄 **Smart NZSL Grammar** - Automatic English to NZSL grammar conversion
+- 🎬 **Video Dictionary** - 4,800+ NZSL signs with high-quality videos
+- ▶️ **Sign Slideshow** - Play all translated signs in sequence for practice
+- 🔍 **Search Function** - Search the entire NZSL dictionary
+- 🔒 **Privacy First** - All processing happens locally in your browser
+- 🎓 **Academic Support** - Features for educational settings
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Who Is This For?
 
-### `npm run build`
+- 👥 Deaf Community members
+- 🎓 NZSL Learners
+- 👨‍👩‍👧‍👦 Families & Friends of Deaf individuals
+- 🏫 Educators & Students
+- 💼 Workplaces seeking accessibility
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## NZSL Grammar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app automatically converts English to NZSL grammar structure:
+- **Time First:** "I will go home tomorrow" → TOMORROW → ME → GO → HOME
+- **Adjectives After Nouns:** "I want the red apple" → ME → APPLE → RED → WANT
+- **Negatives Last:** "I don't like coffee" → ME → LIKE → COFFEE → NOT
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- React 19
+- EmailJS for contact form
+- Hosted on Netlify
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Install dependencies
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Run development server
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Build for production
+```bash
+npm run build
+```
 
-## Learn More
+## Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Sign Data:** NZSL Online Dictionary (Victoria University of Wellington)
+- **License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+- **Developed By:** Tohu Korero Team
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
+- **Founder:** Paul Johnson
+- **Email:** paul@tohukorero.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Making NZSL accessible to everyone, one sign at a time.* 🤟
