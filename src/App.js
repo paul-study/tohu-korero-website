@@ -1,5 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
 import './App.css';
+import MaintenancePage from './MaintenancePage';
+
+// Set to true to show maintenance page, false to show normal site
+const MAINTENANCE_MODE = true;
 
 // EmailJS configuration
 const EMAILJS_SERVICE_ID = 'service_rtncsgq';
@@ -14,6 +18,7 @@ function App() {
 
   // Initialize EmailJS
   useEffect(() => {
+    if (MAINTENANCE_MODE) return; // Skip EmailJS init in maintenance mode
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
     script.async = true;
@@ -23,6 +28,11 @@ function App() {
     document.body.appendChild(script);
     return () => document.body.removeChild(script);
   }, []);
+
+  // Show maintenance page if enabled
+  if (MAINTENANCE_MODE) {
+    return <MaintenancePage />;
+  }
 
   // Handle form submission
   const handleSubmit = (e) => {

@@ -1,0 +1,161 @@
+/* Maintenance Page Styles */
+.maintenance-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.maintenance-container {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.maintenance-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.maintenance-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.maintenance-subtitle {
+  font-size: 1.5rem;
+  color: #764ba2;
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+.maintenance-greeting {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.maintenance-section {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.maintenance-section h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.maintenance-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.maintenance-section ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+.maintenance-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.maintenance-contact {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+.maintenance-contact h3 {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.maintenance-contact a {
+  color: #f4c542;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.maintenance-contact a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.maintenance-tagline {
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+  margin: 2rem 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .maintenance-page {
+    padding: 1rem;
+  }
+  
+  .maintenance-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .maintenance-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .maintenance-title {
+    font-size: 2rem;
+  }
+  
+  .maintenance-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .maintenance-greeting {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .maintenance-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .maintenance-title {
+    font-size: 1.7rem;
+  }
+  
+  .maintenance-subtitle {
+    font-size: 1.1rem;
+  }
+}
