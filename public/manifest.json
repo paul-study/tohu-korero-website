@@ -1,7 +1,7 @@
 {
   "short_name": "Tohu Korero",
-  "name": "Tohu Korero - Speech to Sign Language App",
-  "description": "Convert spoken words to sign language through video and fingerspelling. Accessibility app for deaf and hard of hearing community.",
+  "name": "Tohu Korero - Ideas made to matter",
+  "description": "Explore Tohu Korero projects in creativity, technology and accessible communication.",
   "icons": [
     {
       "src": "signApp.png",
@@ -18,9 +18,9 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#667eea",
-  "background_color": "#ffffff",
+  "theme_color": "#0a0a0f",
+  "background_color": "#0a0a0f",
   "orientation": "portrait-primary",
-  "categories": ["accessibility", "education", "communication"],
+  "categories": ["business", "creativity", "communication"],
   "lang": "en-NZ"
 }

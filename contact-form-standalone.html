@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tohu Korero Contact Form</title>
+    <style>
+        /* Contact Form Styles */
+        .contact-form-wrapper {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+
+        .submit-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .status-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: #555;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form-wrapper">
+        <h2 style="text-align: center; margin-bottom: 1rem; color: #2c3e50;">Contact Tohu Korero</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #666;">Need help with the app or have accessibility questions? We'd love to hear from you!</p>
+
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Your message" rows="5"></textarea>
+            </div>
+            <button type="submit" id="submit-button" class="submit-button">Send Message</button>
+            <div id="status-message" class="status-message" style="display: none;"></div>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Paul Johnson</strong> - Founder & Director</p>
+            <p>Email: paul@tohukorero.com</p>
+        </div>
+    </div>
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        // EmailJS Configuration
+        const EMAILJS_SERVICE_ID = 'service_rtncsgq';
+        const EMAILJS_TEMPLATE_ID = 'template_zzoq2ji';
+        const EMAILJS_PUBLIC_KEY = 'FkQY2Ii4rpYWSwujD';
+
+        // Initialize EmailJS
+        (function() {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+        })();
+
+        // Form handling
+        const form = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+        const statusMessage = document.getElementById('status-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Disable button and show loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // Clear previous status
+            statusMessage.style.display = 'none';
+            statusMessage.className = 'status-message';
+
+            // Prepare form data
+            const formData = {
+                from_name: form.name.value,
+                from_email: form.email.value,
+                message: form.message.value,
+                to_email: 'paustudylaptop@gmail.com'
+            };
+
+            // Send email
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
+                .then(function() {
+                    // Success
+                    statusMessage.textContent = 'Message sent successfully!';
+                    statusMessage.className = 'status-message success';
+                    statusMessage.style.display = 'block';
+                    form.reset();
+
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        statusMessage.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(function(error) {
+                    // Error
+                    console.error('EmailJS error:', error);
+                    statusMessage.textContent = 'Failed to send message. Please try again.';
+                    statusMessage.className = 'status-message error';
+                    statusMessage.style.display = 'block';
+
+                    // Hide error message after 5 seconds
+                    setTimeout(function() {
+                        statusMessage.style.display = 'none';
+                    }, 5000);
+                })
+                .finally(function() {
+                    // Re-enable button
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                });
+        });
+    </script>
+</body>
+</html>
