@@ -1,6 +1,6 @@
 # Tohu Korero
 
-The Tohu Korero landing page is a gateway to projects including [Z Axis Customs](https://zaxiscustoms.netlify.app/) and the Tohu Korero NZSL accessibility project.
+The Tohu Korero landing page showcases full-stack website and web app development and is a gateway to projects including [Z Axis Customs](https://zaxiscustoms.netlify.app/) and the Tohu Korero NZSL accessibility project.
 
 - Website: [tohukorero.com](https://tohukorero.com)
 - NZSL prototype: currently offline while updates are underway

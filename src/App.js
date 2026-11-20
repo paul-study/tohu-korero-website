@@ -156,10 +156,25 @@ function App() {
           </div>
         </section>
 
+        <section className="development section" id="web-development">
+          <div className="container development-layout">
+            <div>
+              <p className="eyebrow"><span className="section-number">02 /</span> FULL-STACK WEB DEVELOPMENT</p>
+              <h2>Websites &amp; apps,<br /><span>built for your ideas.</span></h2>
+            </div>
+            <div className="development-copy">
+              <p className="about-lead">I build websites and web apps, from the interface you see to the functionality behind it.</p>
+              <p>Whether you have an idea for a website or an app, let's talk about how to bring it to life.</p>
+              <div className="development-tags"><span>WEBSITES</span><span>WEB APPS</span><span>FRONT END + BACK END</span></div>
+              <a className="button button-primary" href="#contact">Discuss your project <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </section>
+
         <section className="about section" id="about">
           <div className="container about-layout">
             <div>
-              <p className="eyebrow"><span className="section-number">02 /</span> THE BIGGER PICTURE</p>
+              <p className="eyebrow"><span className="section-number">03 /</span> THE BIGGER PICTURE</p>
               <h2>Curiosity is<br />where it <span>begins.</span></h2>
             </div>
             <div className="about-copy">
@@ -173,7 +188,7 @@ function App() {
         <section className="nzsl-section section" id="nzsl">
           <div className="container nzsl-layout">
             <div>
-              <p className="eyebrow"><span className="section-number">03 /</span> A PROJECT WITH PURPOSE</p>
+              <p className="eyebrow"><span className="section-number">04 /</span> A PROJECT WITH PURPOSE</p>
               <h2>Communication<br />for <span>everyone.</span></h2>
             </div>
             <div className="nzsl-copy">
@@ -188,7 +203,7 @@ function App() {
         <section className="contact section" id="contact">
           <div className="container contact-layout">
             <div className="contact-intro">
-              <p className="eyebrow"><span className="section-number">04 /</span> SAY HELLO</p>
+              <p className="eyebrow"><span className="section-number">05 /</span> SAY HELLO</p>
               <h2>Have an idea?<br /><span>Let's talk.</span></h2>
               <p>Have a question, feedback or something you'd like to create? We'd love to hear from you.</p>
               <a className="contact-email" href="mailto:paul@tohukorero.com">paul@tohukorero.com <span aria-hidden="true">↗</span></a>
@@ -225,7 +240,7 @@ function App() {
         <div className="container footer-inner">
           <a className="footer-brand" href="#home">TOHU <strong>KORERO</strong><span>✳</span></a>
           <p>Ideas that connect, create and make a difference.</p>
-          <div className="footer-links"><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="https://zaxiscustoms.netlify.app/" target="_blank" rel="noopener noreferrer">Z Axis Customs <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
+          <div className="footer-links"><a href="#projects">Projects</a><a href="#web-development">Web development</a><a href="#contact">Contact</a><a href="https://zaxiscustoms.netlify.app/" target="_blank" rel="noopener noreferrer">Z Axis Customs <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
         </div>
         <div className="container footer-bottom"><span>© {new Date().getFullYear()} TOHU KORERO</span><span>MADE WITH PURPOSE IN AOTEAROA</span><a href="#home">BACK TO TOP ↑</a></div>
       </footer>

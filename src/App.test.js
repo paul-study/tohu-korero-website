@@ -28,6 +28,13 @@ test('shows project links, prototype status and direct email', () => {
   expect(screen.getByRole('link', { name: /paul@tohukorero.com/i })).toHaveAttribute('href', 'mailto:paul@tohukorero.com');
 });
 
+test('shows web development services with a link to contact', () => {
+  render(<App />);
+  expect(screen.getByText(/full-stack web development/i)).toBeInTheDocument();
+  expect(screen.getByText(/I build websites and web apps/i)).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /discuss your project/i })).toHaveAttribute('href', '#contact');
+});
+
 test('sends the existing EmailJS payload and clears the form on success', async () => {
   render(<App />);
   const emailjs = loadEmailService();
